@@ -6,15 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="指针-其一–性质篇介绍指针是存储其他变量地址的变量 图1 指针赋值案例 简单代码测试更改指针的值和指针指向的值带来的影响1234567891011121314#include &lt;stdio.h&gt;int main()&amp;#123;    int a; int *p;    a &#x3D; 10;    p &#x3D; &amp;a; &#x2F;&#x2F; &amp;a &#x3D;  address of a    printf(">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/index.html">
+<meta property="og:url" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="指针-其一–性质篇介绍指针是存储其他变量地址的变量 图1 指针赋值案例 简单代码测试更改指针的值和指针指向的值带来的影响1234567891011121314#include &lt;stdio.h&gt;int main()&amp;#123;    int a; int *p;    a &#x3D; 10;    p &#x3D; &amp;a; &#x2F;&#x2F; &amp;a &#x3D;  address of a    printf(">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-16-23-34.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-16-56-03.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-17-10-36.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-20-33-46.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-20-57-27.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-21-20-55.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-21-28-08.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-11-56-17.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-11-58-51.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-12-06-32.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-15-32-13.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-16-15-03.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-16-32-00.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-19-53-35.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-20-05-33.png">
+<meta property="og:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-20-11-53.png">
+<meta property="article:published_time" content="2022-09-20T13:13:05.560Z">
+<meta property="article:modified_time" content="2022-09-19T12:26:49.810Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-16-23-34.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,139 +171,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-指针/pointer-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="指针-其一–性质篇"><a href="#指针-其一–性质篇" class="headerlink" title="指针-其一–性质篇"></a>指针-其一–性质篇</h1><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>指针是存储其他变量<strong>地址</strong>的<strong>变量</strong><br> <img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-16-23-34.png"><br><em>图1</em> <em>指针赋值案例</em></p>
+<h3 id="简单代码测试"><a href="#简单代码测试" class="headerlink" title="简单代码测试"></a>简单代码测试</h3><h4 id="更改指针的值和指针指向的值带来的影响"><a href="#更改指针的值和指针指向的值带来的影响" class="headerlink" title="更改指针的值和指针指向的值带来的影响"></a>更改指针的值和指针指向的值带来的影响</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a; <span class="type">int</span> *p;</span><br><span class="line">    a = <span class="number">10</span>;</span><br><span class="line">    p = &amp;a; <span class="comment">// &amp;a =  address of a</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address of P is %d\n&quot;</span>, p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Value at p is %d\n&quot;</span>, *p);</span><br><span class="line">    <span class="type">int</span> b = <span class="number">20</span>;</span><br><span class="line">    *p = b;<span class="comment">// Will the address in p change to point b</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address of p is %d \n&quot;</span>, p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Value at p is %d\n&quot;</span>, *p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-16-56-03.png"><br><em>图2</em> <em>终端输出结果</em></p>
+<h4 id="指针运算受指针所占字节大小影响"><a href="#指针运算受指针所占字节大小影响" class="headerlink" title="指针运算受指针所占字节大小影响"></a>指针运算受指针所占字节大小影响</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    p = &amp;a;</span><br><span class="line">    <span class="type">double</span> b = <span class="number">10.0</span>;</span><br><span class="line">    <span class="type">double</span> *s;</span><br><span class="line">    s = &amp;b;</span><br><span class="line">    <span class="comment">// pointer arithmetic</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address p is %d\n&quot;</span>, p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Size of integer is %d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address p+1 is %d\n&quot;</span>, p+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address s is %d\n&quot;</span>, s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Size of double is %d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">double</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address s+1 is %d\n&quot;</span>, s+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-17-10-36.png"><br><em>图3</em> <em>运行结果</em><br>我们可以看到指针的运算并不是简单的地址加1，而是与这个指针所指向变量的字节大小相关（int is 4 bytes,double is 8 bytes）。</p>
+<h4 id="指针是强类型的"><a href="#指针是强类型的" class="headerlink" title="指针是强类型的"></a>指针是强类型的</h4><p>需要一个特定类型的指针变量来存放特定类型变量的地址。为什么？<strong>因为</strong> ，我们不仅使用指针来存储内存地址，同时也用来解析和引用他所存储的地址所对应的内容，这样我们就能访问并且修改这些地址对应的值了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1025</span>;</span><br><span class="line">    <span class="type">int</span> *p;</span><br><span class="line">    p = &amp;a;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;size of integer is %d bytes\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address = %d , value = %d\n&quot;</span>, p, *p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address = %d , value = %d\n&quot;</span>, p+<span class="number">1</span>, *(p+<span class="number">1</span>));</span><br><span class="line">    <span class="type">char</span> *p0 = (<span class="type">char</span> *)p; <span class="comment">// typecasting</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;size of char is %d bytes\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address = %d, value = %d\n&quot;</span>, p0, *p0);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address = %d , value = %d\n&quot;</span>, p0+<span class="number">1</span>, *(p0+<span class="number">1</span>));</span><br><span class="line">    <span class="comment">// 1025 = 00000000 00000000 00000100(p0+1) 00000001(p0)</span></span><br><span class="line">    <span class="type">void</span> *p1 = p;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Address = %d&quot;</span>, p1);<span class="comment">//*p1 is illegal, because pointer p1 is void type(no type)</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-20-33-46.png"><br><em>运行结果</em></p>
+<h3 id="指针的指针"><a href="#指针的指针" class="headerlink" title="指针的指针"></a>指针的指针</h3><p>直接上代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> x = <span class="number">5</span>;</span><br><span class="line">   <span class="type">int</span>* p = &amp;x;</span><br><span class="line">   *p = <span class="number">6</span>;</span><br><span class="line">   <span class="type">int</span>** q = &amp;p;</span><br><span class="line">   <span class="type">int</span>*** r = &amp;q;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *p);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *q);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, **q);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, **r);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ***r);</span><br><span class="line">   ***r = <span class="number">10</span>;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;x = %d\n&quot;</span>, x);</span><br><span class="line">   **q = *p +<span class="number">2</span>;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;x = %d\n&quot;</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-20-57-27.png"><br><em>运行结果图</em> </p>
+<h3 id="函数传值-vs-传引用"><a href="#函数传值-vs-传引用" class="headerlink" title="函数传值 vs 传引用"></a>函数传值 vs 传引用</h3><p>首先运行一段代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Increment</span><span class="params">(<span class="type">int</span> a)</span></span><br><span class="line">&#123;</span><br><span class="line">    a = a + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a; </span><br><span class="line">    a =<span class="number">10</span>;</span><br><span class="line">    Increment(a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %d&quot;</span>, a);<span class="comment">// Output is a = 10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>从程序设计角度讲，这段程序调用Increment函数时传入的参数a仅传入一个值10，与main函数定义的变量a本身无关，称之为 <strong>传值调用</strong>。把Increment函数的定义的局部变量a改为x丝毫不影响程序运行;</li>
+<li>从内存分配的角度讲，main函数和Increment函数分配在两个完全不同的栈帧中（一个函数仅有一个栈帧），它们在栈帧中定义的局部变量a具有不同的内存地址，主函数调用Increment函数时，仅传入一个值10,Increment函数这个值赋给新的a;</li>
+</ol>
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-21-20-55.png"></p>
+<p>那么我们如何更改main函数中的a的值了，需要使用指针作为参数，称之为传引用。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">Increment</span><span class="params">(<span class="type">int</span> *p)</span></span><br><span class="line">&#123;</span><br><span class="line">    *p = (*p) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a; </span><br><span class="line">    a =<span class="number">10</span>;</span><br><span class="line">    Increment(&amp;a);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a = %d&quot;</span>, a);<span class="comment">// Output is a = 10</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>新的内存图如下：<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-18-21-28-08.png"></p>
+<h3 id="指针和数组"><a href="#指针和数组" class="headerlink" title="指针和数组"></a>指针和数组</h3><p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-11-56-17.png"><br><em>数组上指针的计算</em><br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-11-58-51.png"><br>上面两张图很好的说明了数组与指针的关系。<br>再看一段简单的代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Address = %d\n&quot;</span>, &amp;A[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Address = %d\n&quot;</span>, A+i);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;value = %d\n&quot;</span>, A[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;value = %d\n&quot;</span>, *(A+i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-12-06-32.png"><br><em>运行结果</em><br><strong>注意</strong>:对A进行自增操作A++是非法的。</p>
+<h3 id="数组作为函数参数"><a href="#数组作为函数参数" class="headerlink" title="数组作为函数参数"></a>数组作为函数参数</h3><p>当编译器看到数组作为参数传递到一个函数时，它不会拷贝整个数组，它仅仅是创建一个指向数组起始地址的指针。所以执行下列代码不会得到一个正确的结果。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">SumOfElements</span><span class="params">(<span class="type">int</span> A[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i, sum = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> size = <span class="keyword">sizeof</span>(A)/<span class="keyword">sizeof</span>(A[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        sum += A[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> A[] = &#123;<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="type">int</span> total = SumOfElements(A);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum of elements = %d\n&quot;</span>, total);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原因从内存分配角度来看：<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-15-32-13.png"><br>为什么不直接copy整个数组去到调用函数的栈帧呢？因为一个数组通常会占用较大的内存，每次使用数组作为函数参数调用时，复制整个数组会耗费大量的内存，而使用一个指针仅仅需要不超过8bytes的内存（这就是指针的妙用之一）。</p>
+<h2 id="指针和字符数组"><a href="#指针和字符数组" class="headerlink" title="指针和字符数组"></a>指针和字符数组</h2><p>在c语言中，字符串就是一个字符数组。</p>
+<h3 id="如何用指针操作字符数组"><a href="#如何用指针操作字符数组" class="headerlink" title="如何用指针操作字符数组"></a>如何用指针操作字符数组</h3><p>字符串中最后一个字符必须以Null结尾，用’\0’表示。因为只有这样编译器才能知道这个字符串什么位置结束，标准输出从而不去读取不存在的字符。<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-16-15-03.png"></p>
+<p>数组和指针是以相同的方式被使用的不同类型。<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-16-32-00.png"><br>运行一段代码：*(c+i)与c[i]具有相同含义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">print</span><span class="params">(<span class="type">char</span> *C)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (*(C+i) =<span class="string">&#x27;\0&#x27;</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, C[i]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> C[<span class="number">20</span>] = <span class="string">&quot;Hello&quot;</span>;<span class="comment">// string gets stored in the space for array</span></span><br><span class="line">    <span class="comment">//char *C = &quot;Hello&quot;;// string gets stored as compile time constant,C[0] = &#x27;A&#x27; error</span></span><br><span class="line">    print(C);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将字符串用数组存储，需指定数组长度大于或等于字符串长度+1，可以更改字符串内字符。如果用指针存储,无需指定长度，但不可修改字符串内字符。</p>
+<h2 id="指针与多维数组"><a href="#指针与多维数组" class="headerlink" title="指针与多维数组"></a>指针与多维数组</h2><h3 id="简单二维数组"><a href="#简单二维数组" class="headerlink" title="简单二维数组"></a>简单二维数组</h3><p><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-19-53-35.png"><br>$B[i][j] &#x3D; *(B[i] + j) &#x3D; <em>(</em>(B + i) + j)$</p>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p>二维数组B[2][3]的内存地址分布如下：<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-20-05-33.png"><br>三维数组C[3][2][2]的内存地址分布如下：<br><img src="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/2022-09-19-20-11-53.png"><br>有公式：$C[i][j][k] &#x3D; <em>(C[i][j] + k) &#x3D; <em>(</em>(C[i] + j) + k) &#x3D; <em>(</em>(</em>(C + i) + j) + k)$</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> C[<span class="number">3</span>][<span class="number">2</span>][<span class="number">2</span>] = &#123;&#123;&#123;<span class="number">2</span>,<span class="number">5</span>&#125;, &#123;<span class="number">7</span>,<span class="number">9</span>&#125;&#125;,</span><br><span class="line">                      &#123;&#123;<span class="number">3</span>,<span class="number">4</span>&#125;, &#123;<span class="number">6</span>,<span class="number">1</span>&#125;&#125;,</span><br><span class="line">                      &#123;&#123;<span class="number">0</span>,<span class="number">8</span>&#125;,&#123;<span class="number">11</span>,<span class="number">13</span>&#125;&#125;&#125;;</span><br><span class="line">    Func(C);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Func</span><span class="params">(<span class="type">int</span> (*A)[<span class="number">2</span>][<span class="number">2</span>])</span>;<span class="comment">// int ***A is wrong</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/20/%E6%8C%87%E9%92%88/pointer-3/" class="archive-article-date">
-  	<time datetime="2022-09-20T13:13:05.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/20/%E6%8C%87%E9%92%88/pointer-2/" class="archive-article-date">
-  	<time datetime="2022-09-20T13:13:05.561Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/20/%E6%8C%87%E9%92%88/pointer-1/" class="archive-article-date">
-  	<time datetime="2022-09-20T13:13:05.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-20</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2022/09/20/%E6%8C%87%E9%92%88/pointer-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2022-07-12T06:07:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/07/12/hello-world/" class="archive-article-date">
-  	<time datetime="2022-07-12T06:01:40.726Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/07/12/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -305,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
