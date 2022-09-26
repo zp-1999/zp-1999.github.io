@@ -6,15 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/9 | Hexo</title>
+  <title>tree-3-app | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/09/index.html">
+  <meta name="description" content="二叉树的遍历、广度优先 vs  深度优先 层次遍历(Breadth-first) 12345678910111213141516171819202122232425#include&lt;iostream&gt;#include&lt;queue&gt;using namespace std;struct Node	&amp;#123;	char data;	Node* left;	Node* right">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tree-3-app">
+<meta property="og:url" content="http://example.com/2022/09/24/tree-3-app/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="二叉树的遍历、广度优先 vs  深度优先 层次遍历(Breadth-first) 12345678910111213141516171819202122232425#include&lt;iostream&gt;#include&lt;queue&gt;using namespace std;struct Node	&amp;#123;	char data;	Node* left;	Node* right">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/Traversal.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/Level-order.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/L-oByQueue.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/Preorder.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/Inorder.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/Postorder.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/TreeToExe.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/BST.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/ScopeOfBst.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/DeleteANode1.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/DeleteNode3-1.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/DeleteNode3-2.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/DeleteNode3-3.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-3-app/BstInorder.PNG">
+<meta property="article:published_time" content="2022-09-24T10:10:13.000Z">
+<meta property="article:modified_time" content="2022-09-25T12:21:12.963Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/09/24/tree-3-app/Traversal.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,292 +169,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-tree-3-app" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/graph-1-intro/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:10:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/graph-1-intro/">graph-1-intro</a>
+    <h1 class="article-title" itemprop="name">
+      tree-3-app
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-3-app/" class="archive-article-date">
+        
+        <a href="/2022/09/24/tree-3-app/" class="archive-article-date">
   	<time datetime="2022-09-24T10:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-3-app/">tree-3-app</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="二叉树的遍历、"><a href="#二叉树的遍历、" class="headerlink" title="二叉树的遍历、"></a>二叉树的遍历、</h2><h3 id="广度优先-vs-深度优先"><a href="#广度优先-vs-深度优先" class="headerlink" title="广度优先 vs  深度优先"></a>广度优先 vs  深度优先</h3><p><img src="/2022/09/24/tree-3-app/Traversal.PNG"></p>
+<h3 id="层次遍历-Breadth-first"><a href="#层次遍历-Breadth-first" class="headerlink" title="层次遍历(Breadth-first)"></a>层次遍历(Breadth-first)</h3><p><img src="/2022/09/24/tree-3-app/Level-order.PNG"></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>	</span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> data;</span><br><span class="line">	Node* left;</span><br><span class="line">	Node* right;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">LevelOrder</span><span class="params">(Node* root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	queue&lt;Node*&gt; Q;</span><br><span class="line">	Q.<span class="built_in">push</span>(root);</span><br><span class="line">	<span class="keyword">while</span> (!Q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		Node* current = Q.<span class="built_in">front</span>();</span><br><span class="line">		cout&lt;&lt;current-&gt;data&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">		<span class="keyword">if</span>(current-&gt;left != <span class="literal">NULL</span>) Q.<span class="built_in">push</span>(current-&gt;left);</span><br><span class="line">		<span class="keyword">if</span>(current-&gt;right != <span class="literal">NULL</span>) Q.<span class="built_in">push</span>(current-&gt;right);</span><br><span class="line">		Q.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// Time-complexity = O(n);Space-complexity = O(1)-best || O(n)-worst/avg</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们使用队列来实现：每次dequeue一个节点，就enqueue它的所有孩子节点。<br><img src="/2022/09/24/tree-3-app/L-oByQueue.PNG"></p>
+<h3 id="前序、中序、后序遍历-Depth-first"><a href="#前序、中序、后序遍历-Depth-first" class="headerlink" title="前序、中序、后序遍历(Depth-first)"></a>前序、中序、后序遍历(Depth-first)</h3><p><img src="/2022/09/24/tree-3-app/Preorder.PNG"><br><img src="/2022/09/24/tree-3-app/Inorder.PNG"><br><img src="/2022/09/24/tree-3-app/Postorder.PNG"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">right</span>;</span></span><br><span class="line">&#125; *LNode;   </span><br><span class="line"><span class="type">void</span> <span class="title function_">Preorder</span><span class="params">(LNode root)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, root-&gt;data);</span><br><span class="line">    Preorder(root-&gt;left);</span><br><span class="line">    Preorder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Inorder</span><span class="params">(LNode root)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">    Inorder(root-&gt;left);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c &quot;</span>, root-&gt;data);</span><br><span class="line">    Inorder(root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Postorder</span><span class="params">(LNode root)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span>;</span><br><span class="line">    Postorder(root-&gt;left);</span><br><span class="line">    Postorder(root-&gt;right);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c &quot;</span>,root-&gt;data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/24/tree-3-app/TreeToExe.PNG"><br>我们可以在上图实验我们的代码递归逻辑<br>Time Complexity:  O(n)<br>Space Complexity: O(height of tree) &#x3D; worst: O(n) || best&#x2F;avg: O(logn)</p>
+<h2 id="二叉搜索树的函数功能"><a href="#二叉搜索树的函数功能" class="headerlink" title="二叉搜索树的函数功能"></a>二叉搜索树的函数功能</h2><h3 id="判断树是否为二叉搜索树"><a href="#判断树是否为二叉搜索树" class="headerlink" title="判断树是否为二叉搜索树"></a>判断树是否为二叉搜索树</h3><p><img src="/2022/09/24/tree-3-app/BST.PNG"><br>第一种方法，成本较高：时间复杂度 O(n^2)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdbool.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">right</span>;</span></span><br><span class="line">&#125; *LNode;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">IsSubtreeLesser</span><span class="params">(LNode child, <span class="type">int</span> rootData)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(child == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(child-&gt;data &lt; rootData </span><br><span class="line">        &amp;&amp; IsSubtreeLesser(child-&gt;left, rootData)</span><br><span class="line">        &amp;&amp; IsSubtreeLesser(child-&gt;right, rootData))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">IsSubtreeGreater</span><span class="params">(LNode child, <span class="type">int</span> rootData)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(child == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(child-&gt;data &gt; rootData </span><br><span class="line">        &amp;&amp; IsSubtreeGreater(child-&gt;left, rootData)</span><br><span class="line">        &amp;&amp; IsSubtreeGreater(child-&gt;right, rootData))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">IsBinarySearchTree</span><span class="params">(LNode root)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="comment">// return true if Bst, false otherwise</span></span><br><span class="line">    <span class="keyword">if</span>(IsSubtreeLesser(root-&gt;left, root-&gt;data)</span><br><span class="line">        &amp;&amp; IsSubtreeGreater(root-&gt;right, root-&gt;data)</span><br><span class="line">        &amp;&amp; IsBinarySearchTree(root-&gt;left)</span><br><span class="line">        &amp;&amp; IsBinarySearchTree(root-&gt;right))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二种，将二叉搜索树视为范围区间组成: 时间复杂度O(n)<br><img src="/2022/09/24/tree-3-app/ScopeOfBst.PNG"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">IsBstUtil</span><span class="params">(LNode root, <span class="type">int</span> minValue, <span class="type">int</span> maxValue)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root-&gt;data &gt; minValue &amp;&amp; root-&gt;data &lt;= maxValue</span><br><span class="line">        &amp;&amp; IsBstUtil(root-&gt;left, minValue, root-&gt;data)</span><br><span class="line">        &amp;&amp; IsBstUtil(root-&gt;right, root-&gt;data, maxValue))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">IsBinarySearchTree</span><span class="params">(LNode root)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> IsBstUtil(root, INT_MIN, INT_MAX);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="从二叉搜索树中删除一个节点"><a href="#从二叉搜索树中删除一个节点" class="headerlink" title="从二叉搜索树中删除一个节点"></a>从二叉搜索树中删除一个节点</h3><ol>
+<li>这个节点是叶子节点，切断这个节点的链接，释放该节点</li>
+<li>这个节点有一个孩子节点，该节点的子树链接到该节点的父节点，释放该节点<br><img src="/2022/09/24/tree-3-app/DeleteANode1.PNG"></li>
+<li>这个节点有两个孩子节点，把该节点右子树中的最小值或者左子树的最大值复制到该节点，删除重复节点(可能会重复场景3&#x2F;2&#x2F;1)。<br>删除15这个节点的步骤图如下 ：<br><img src="/2022/09/24/tree-3-app/DeleteNode3-1.PNG"><br><img src="/2022/09/24/tree-3-app/DeleteNode3-2.PNG"><br><img src="/2022/09/24/tree-3-app/DeleteNode3-3.PNG"><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">LNode <span class="title function_">Delete</span><span class="params">(LNode root, <span class="type">int</span> data)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span> root;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(data &lt; root-&gt;data) </span><br><span class="line">        root-&gt;left = Delete(root-&gt;left, data);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(data &gt; root-&gt;data)</span><br><span class="line">        root-&gt;right = Delete(root-&gt;right, data);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">free</span>(root);</span><br><span class="line">            root = <span class="literal">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(root-&gt;left == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            LNode temp = root;</span><br><span class="line">            root = root-&gt;right;</span><br><span class="line">            <span class="built_in">free</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(root-&gt;right == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            LNode temp = root;</span><br><span class="line">            root = root-&gt;left;</span><br><span class="line">            <span class="built_in">free</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            LNode temp = FindMin(root-&gt;right);</span><br><span class="line">            root-&gt;data = temp-&gt;data;</span><br><span class="line">            root-&gt;right = Delete(root-&gt;right, temp-&gt;data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="二叉搜索树的中序遍历"><a href="#二叉搜索树的中序遍历" class="headerlink" title="二叉搜索树的中序遍历"></a>二叉搜索树的中序遍历</h3><p><img src="/2022/09/24/tree-3-app/BstInorder.PNG"><br>对中序遍历后继节点的讨论：</p>
+<ol>
+<li>节点有右子树：右子树的最左边的节点，即右子树中的最小值。</li>
+<li>节点无右子树：来到节点的父节点，如果这个节点是父节点左孩子(节点值小于父节点值)，则后继节点就是这个节点；不是(节点值大于父节点值），则父节点的父节点是后继节点。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">LNode <span class="title function_">Find</span><span class="params">(LNode root, <span class="type">int</span> data)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span> || root-&gt;data == data)</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(root-&gt;data &gt; data)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Find(root-&gt;left, data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> Find(root-&gt;right, data);</span><br><span class="line">&#125;</span><br><span class="line">LNode <span class="title function_">GetSuccessor</span><span class="params">(LNode root, <span class="type">int</span> data)</span></span><br><span class="line">&#123;</span><br><span class="line">    LNode current = Find(root, data);</span><br><span class="line">    <span class="keyword">if</span>(current == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(current-&gt;right != <span class="literal">NULL</span>) <span class="comment">// Node has right subtree</span></span><br><span class="line">    &#123;</span><br><span class="line">        LNode temp = current-&gt;right;</span><br><span class="line">        <span class="keyword">while</span>(temp-&gt;left != <span class="literal">NULL</span>)</span><br><span class="line">            temp = temp-&gt;left;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="comment">// No right subtree</span></span><br><span class="line">    &#123;</span><br><span class="line">        LNode successor = <span class="literal">NULL</span>;</span><br><span class="line">        LNode ancestor = root;</span><br><span class="line">        <span class="keyword">while</span>(ancestor != successor)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(current-&gt;data &gt; ancestor-&gt;data)</span><br><span class="line">                ancestor = ancestor-&gt;right;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                successor = ancestor;</span><br><span class="line">                ancestor = ancestor-&gt;left;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/24/tree-3-app/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-2-imp/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:09:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2022/09/24/graph-1-intro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          graph-1-intro
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/09/24/tree-2-imp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tree-2-imp</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-2-imp/">tree-2-imp</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-1-intro/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-1-intro/">tree-1-intro</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-3/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-3/">pointer-3</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-2/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-2/">pointer-2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-1/" class="archive-article-date">
-  	<time datetime="2022-09-24T09:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-1/">pointer-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/23/dataStructure-3-quenes/" class="archive-article-date">
-  	<time datetime="2022-09-23T12:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/23/dataStructure-3-quenes/">dataStructure-3-quenes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/22/dataStructure-2-Stack/" class="archive-article-date">
-  	<time datetime="2022-09-22T10:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/22/dataStructure-2-Stack/">dataStructure-2-Stack</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/21/datastructure-1/" class="archive-article-date">
-  	<time datetime="2022-09-21T02:52:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/21/datastructure-1/">dataStructure-1-LinkedList</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -458,8 +370,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

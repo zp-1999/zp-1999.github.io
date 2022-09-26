@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/9 | Hexo</title>
+  <title>dataStructure-2-Stack | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/09/index.html">
+  <meta name="description" content="栈栈的性质栈是先进后出（LIFO）的。 栈的应用 函数调用，回调函数 撤销操作 编译器验证源代码中的括号匹配  使用数组实现一个栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;stdio.h&gt;#de">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dataStructure-2-Stack">
+<meta property="og:url" content="http://example.com/2022/09/22/dataStructure-2-Stack/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="栈栈的性质栈是先进后出（LIFO）的。 栈的应用 函数调用，回调函数 撤销操作 编译器验证源代码中的括号匹配  使用数组实现一个栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;stdio.h&gt;#de">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/Stack.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/StackOperation.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/StackReverse.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/Fix.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/InFixToPostFix.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/PostFix.PNG">
+<meta property="og:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/FixAndbracket.PNG">
+<meta property="article:published_time" content="2022-09-22T10:33:06.000Z">
+<meta property="article:modified_time" content="2022-09-23T12:04:56.913Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/09/22/dataStructure-2-Stack/Stack.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,292 +162,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-dataStructure-2-Stack" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/graph-1-intro/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:10:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/graph-1-intro/">graph-1-intro</a>
+    <h1 class="article-title" itemprop="name">
+      dataStructure-2-Stack
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-3-app/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-3-app/">tree-3-app</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-2-imp/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:09:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-2-imp/">tree-2-imp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-1-intro/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-1-intro/">tree-1-intro</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-3/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-3/">pointer-3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-2/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-2/">pointer-2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-1/" class="archive-article-date">
-  	<time datetime="2022-09-24T09:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-1/">pointer-1</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/23/dataStructure-3-quenes/" class="archive-article-date">
-  	<time datetime="2022-09-23T12:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/23/dataStructure-3-quenes/">dataStructure-3-quenes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/22/dataStructure-2-Stack/" class="archive-article-date">
+        
+        <a href="/2022/09/22/dataStructure-2-Stack/" class="archive-article-date">
   	<time datetime="2022-09-22T10:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/22/dataStructure-2-Stack/">dataStructure-2-Stack</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h3 id="栈的性质"><a href="#栈的性质" class="headerlink" title="栈的性质"></a>栈的性质</h3><p>栈是先进后出（<strong>LIFO</strong>）的。<br><img src="/2022/09/22/dataStructure-2-Stack/Stack.PNG"></p>
+<h3 id="栈的应用"><a href="#栈的应用" class="headerlink" title="栈的应用"></a>栈的应用</h3><ol>
+<li>函数调用，回调函数</li>
+<li>撤销操作</li>
+<li>编译器验证源代码中的括号匹配</li>
+</ol>
+<h3 id="使用数组实现一个栈"><a href="#使用数组实现一个栈" class="headerlink" title="使用数组实现一个栈"></a>使用数组实现一个栈</h3><p><img src="/2022/09/22/dataStructure-2-Stack/StackOperation.PNG"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_SIZE  101</span></span><br><span class="line"><span class="type">int</span> A[MAX_SIZE];</span><br><span class="line"><span class="type">int</span> top = <span class="number">-1</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(<span class="type">int</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(top == MAX_SIZE <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Error: stack overflow\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[++top] = x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Pop</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(top == <span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Error: no element to pop\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    top--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">Top</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(top &gt; <span class="number">-1</span> &amp;&amp; top &lt; MAX_SIZE<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> A[top];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Error: get no element\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">IsEmpty</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(top == <span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Print</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Stack: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= top; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, A[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    Push(<span class="number">2</span>);Print();</span><br><span class="line">    Push(<span class="number">6</span>);Print();</span><br><span class="line">    Push(<span class="number">4</span>);Print();</span><br><span class="line">    Pop();Print();</span><br><span class="line">    Push(<span class="number">8</span>);Print();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用链表实现一个栈"><a href="#使用链表实现一个栈" class="headerlink" title="使用链表实现一个栈"></a>使用链表实现一个栈</h3><p>栈指针-&gt;链表头指针，栈的操作-&gt;链表的插入、删除操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; *LNode;</span><br><span class="line">LNode top = <span class="literal">NULL</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(<span class="type">int</span> data)</span></span><br><span class="line">&#123;</span><br><span class="line">    LNode temp = (LNode)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> Node));</span><br><span class="line">    temp-&gt;data = data;</span><br><span class="line">    temp-&gt;next = top;</span><br><span class="line">    top = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">Pop</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    LNode temp;</span><br><span class="line">    <span class="keyword">if</span>(top == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    temp = top;</span><br><span class="line">    top = top-&gt;next;</span><br><span class="line">    <span class="built_in">free</span>(temp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用栈反转一个字符或者反转一个链表"><a href="#使用栈反转一个字符或者反转一个链表" class="headerlink" title="使用栈反转一个字符或者反转一个链表"></a>使用栈反转一个字符或者反转一个链表</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Reverse</span><span class="params">(<span class="type">char</span> *C, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    stack&lt;<span class="type">char</span>&gt; S;</span><br><span class="line">    <span class="comment">//loop for push</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        S.<span class="built_in">push</span>(C[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//loop for pop</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        C[i] = S.<span class="built_in">top</span>();</span><br><span class="line">        S.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> C[<span class="number">51</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Enter a string:&quot;</span>);</span><br><span class="line">    <span class="built_in">gets</span>(C);</span><br><span class="line">    <span class="built_in">Reverse</span>(C, <span class="built_in">strlen</span>(C));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Output = %s&quot;</span>, C);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/09/22/dataStructure-2-Stack/StackReverse.PNG"></p>
+<h3 id="使用栈检查括号的匹配性"><a href="#使用栈检查括号的匹配性" class="headerlink" title="使用栈检查括号的匹配性"></a>使用栈检查括号的匹配性</h3><p>匹配原则：</p>
+<ol>
+<li>开括号和闭括号数量相同</li>
+<li>一个开括号就需要一个对应的闭括号结束</li>
+<li>最后未关闭的开括号，最近被闭括号关闭<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// scan from left to right</span></span><br><span class="line"><span class="comment">// if opening symbol ,add it to a list</span></span><br><span class="line"><span class="comment">// if closing symbol ,remove last opening symbol in list</span></span><br><span class="line"><span class="comment">// should be end with an empty list</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Function to check whether two characters are opening </span></span><br><span class="line"><span class="comment">// and closing of same type. </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">ArePair</span><span class="params">(<span class="type">char</span> opening,<span class="type">char</span> closing)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(opening == <span class="string">&#x27;(&#x27;</span> &amp;&amp; closing == <span class="string">&#x27;)&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(opening == <span class="string">&#x27;&#123;&#x27;</span> &amp;&amp; closing == <span class="string">&#x27;&#125;&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(opening == <span class="string">&#x27;[&#x27;</span> &amp;&amp; closing == <span class="string">&#x27;]&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">AreParanthesesBalanced</span><span class="params">(string exp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	stack&lt;<span class="type">char</span>&gt;  S;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i&lt;exp.<span class="built_in">length</span>();i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(exp[i] == <span class="string">&#x27;(&#x27;</span> || exp[i] == <span class="string">&#x27;&#123;&#x27;</span> || exp[i] == <span class="string">&#x27;[&#x27;</span>)</span><br><span class="line">			S.<span class="built_in">push</span>(exp[i]);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(exp[i] == <span class="string">&#x27;)&#x27;</span> || exp[i] == <span class="string">&#x27;&#125;&#x27;</span> || exp[i] == <span class="string">&#x27;]&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(S.<span class="built_in">empty</span>() || !<span class="built_in">ArePair</span>(S.<span class="built_in">top</span>(),exp[i]))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				S.<span class="built_in">pop</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> S.<span class="built_in">empty</span>() ? <span class="literal">true</span>:<span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">/*Code to test the function AreParanthesesBalanced*/</span></span><br><span class="line">	string expression;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Enter an expression:  &quot;</span>; <span class="comment">// input expression from STDIN/Console</span></span><br><span class="line">	cin&gt;&gt;expression;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">AreParanthesesBalanced</span>(expression))</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;Balanced\n&quot;</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;Not Balanced\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="中缀、前缀、后缀的表达式"><a href="#中缀、前缀、后缀的表达式" class="headerlink" title="中缀、前缀、后缀的表达式"></a>中缀、前缀、后缀的表达式</h3><p>中缀表达式往往需要考虑计算优先级，而前缀和后缀表达式无需考虑<br><img src="/2022/09/22/dataStructure-2-Stack/Fix.PNG"></p>
+<h3 id="使用栈实现前缀、后缀表达式求值"><a href="#使用栈实现前缀、后缀表达式求值" class="headerlink" title="使用栈实现前缀、后缀表达式求值"></a>使用栈实现前缀、后缀表达式求值</h3><p>后缀表达式：从左至右扫描 前缀表达式：从右至左扫描</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Evaluation Of postfix Expression in C++ </span></span><br><span class="line"><span class="comment">  Input Postfix expression must be in a desired format. </span></span><br><span class="line"><span class="comment">  Operands must be integers and there should be space in between two operands.</span></span><br><span class="line"><span class="comment">  Only &#x27;+&#x27;  ,  &#x27;-&#x27;  , &#x27;*&#x27; and &#x27;/&#x27;  operators are expected. </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// Function to evaluate Postfix expression and return output</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">EvaluatePostfix</span><span class="params">(string expression)</span></span>;</span><br><span class="line"><span class="comment">// Function to perform an operation and return output. </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">PerformOperation</span><span class="params">(<span class="type">char</span> operation, <span class="type">int</span> operand1, <span class="type">int</span> operand2)</span></span>;</span><br><span class="line"><span class="comment">// Function to verify whether a character is operator symbol or not. </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsOperator</span><span class="params">(<span class="type">char</span> C)</span></span>;</span><br><span class="line"><span class="comment">// Function to verify whether a character is numeric digit. </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsNumericDigit</span><span class="params">(<span class="type">char</span> C)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string expression; </span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Enter Postfix Expression \n&quot;</span>;</span><br><span class="line">	<span class="built_in">getline</span>(cin,expression);</span><br><span class="line">	<span class="type">int</span> result = <span class="built_in">EvaluatePostfix</span>(expression);</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Output = &quot;</span>&lt;&lt;result&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Function to evaluate Postfix expression and return output</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">EvaluatePostfix</span><span class="params">(string expression)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// Declaring a Stack from Standard template library in C++. </span></span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; S;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i&lt; expression.<span class="built_in">length</span>();i++) &#123;</span><br><span class="line">		<span class="comment">// Scanning each character from left. </span></span><br><span class="line">		<span class="comment">// If character is a delimitter, move on. </span></span><br><span class="line">		<span class="keyword">if</span>(expression[i] == <span class="string">&#x27; &#x27;</span> || expression[i] == <span class="string">&#x27;,&#x27;</span>) <span class="keyword">continue</span>; </span><br><span class="line">		<span class="comment">// If character is operator, pop two elements from stack, perform operation and push the result back. </span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">IsOperator</span>(expression[i])) &#123;</span><br><span class="line">			<span class="comment">// Pop two operands. </span></span><br><span class="line">			<span class="type">int</span> operand2 = S.<span class="built_in">top</span>(); S.<span class="built_in">pop</span>();</span><br><span class="line">			<span class="type">int</span> operand1 = S.<span class="built_in">top</span>(); S.<span class="built_in">pop</span>();</span><br><span class="line">			<span class="comment">// Perform operation</span></span><br><span class="line">			<span class="type">int</span> result = <span class="built_in">PerformOperation</span>(expression[i], operand1, operand2);</span><br><span class="line">			<span class="comment">//Push back result of operation on stack. </span></span><br><span class="line">			S.<span class="built_in">push</span>(result);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">IsNumericDigit</span>(expression[i]))&#123;</span><br><span class="line">			<span class="comment">// Extract the numeric operand from the string</span></span><br><span class="line">			<span class="comment">// Keep incrementing i as long as you are getting a numeric digit. </span></span><br><span class="line">			<span class="type">int</span> operand = <span class="number">0</span>; </span><br><span class="line">			<span class="keyword">while</span>(i&lt;expression.<span class="built_in">length</span>() &amp;&amp; <span class="built_in">IsNumericDigit</span>(expression[i])) &#123;</span><br><span class="line">				<span class="comment">// For a number with more than one digits, as we are scanning from left to right. </span></span><br><span class="line">				<span class="comment">// Everytime , we get a digit towards right, we can multiply current total in operand by 10 </span></span><br><span class="line">				<span class="comment">// and add the new digit. </span></span><br><span class="line">				operand = (operand*<span class="number">10</span>) + (expression[i] - <span class="string">&#x27;0&#x27;</span>); </span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// Finally, you will come out of while loop with i set to a non-numeric character or end of string</span></span><br><span class="line">			<span class="comment">// decrement i because it will be incremented in increment section of loop once again. </span></span><br><span class="line">			<span class="comment">// We do not want to skip the non-numeric character by incrementing i twice. </span></span><br><span class="line">			i--;</span><br><span class="line">			<span class="comment">// Push operand on stack. </span></span><br><span class="line">			S.<span class="built_in">push</span>(operand);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// If expression is in correct format, Stack will finally have one element. This will be the output. </span></span><br><span class="line">	<span class="keyword">return</span> S.<span class="built_in">top</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Function to verify whether a character is numeric digit. </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsNumericDigit</span><span class="params">(<span class="type">char</span> C)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(C &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; C &lt;= <span class="string">&#x27;9&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Function to verify whether a character is operator symbol or not. </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsOperator</span><span class="params">(<span class="type">char</span> C)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(C == <span class="string">&#x27;+&#x27;</span> || C == <span class="string">&#x27;-&#x27;</span> || C == <span class="string">&#x27;*&#x27;</span> || C == <span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Function to perform an operation and return output. </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">PerformOperation</span><span class="params">(<span class="type">char</span> operation, <span class="type">int</span> operand1, <span class="type">int</span> operand2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(operation == <span class="string">&#x27;+&#x27;</span>) <span class="keyword">return</span> operand1 +operand2;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(operation == <span class="string">&#x27;-&#x27;</span>) <span class="keyword">return</span> operand1 - operand2;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(operation == <span class="string">&#x27;*&#x27;</span>) <span class="keyword">return</span> operand1 * operand2;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(operation == <span class="string">&#x27;/&#x27;</span>) <span class="keyword">return</span> operand1 / operand2;</span><br><span class="line">	<span class="keyword">else</span> cout&lt;&lt;<span class="string">&quot;Unexpected Error \n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用栈实现中缀到后缀表达式的转换"><a href="#使用栈实现中缀到后缀表达式的转换" class="headerlink" title="使用栈实现中缀到后缀表达式的转换"></a>使用栈实现中缀到后缀表达式的转换</h3><p><img src="/2022/09/22/dataStructure-2-Stack/InFixToPostFix.PNG"><br><strong>逻辑描述</strong>：按<em>从左至右</em>的顺序压入运算符，优先级更高(*&#x2F;),当遇到了一个低优先级的运算符时(+&#x2F;-)，把栈中的高优先级的运算符依次弹出。把这个低优先级的运算符压入。重复上述这样的操作，最后会有低优先级的操作符留在栈中，依次弹出。<br><img src="/2022/09/22/dataStructure-2-Stack/PostFix.PNG"><br>思考带括号的中缀表达式，利用前面栈匹配括号的知识<br><img src="/2022/09/22/dataStructure-2-Stack/FixAndbracket.PNG"><br><strong>代码链接</strong>：<a target="_blank" rel="noopener" href="https://gist.github.com/mycodeschool/7867739">https://gist.github.com/mycodeschool/7867739</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/22/dataStructure-2-Stack/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/21/datastructure-1/" class="archive-article-date">
-  	<time datetime="2022-09-21T02:52:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-21</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2022/09/23/dataStructure-3-quenes/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          dataStructure-3-quenes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/09/21/datastructure-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">dataStructure-1-LinkedList</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/21/datastructure-1/">dataStructure-1-LinkedList</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -458,8 +364,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

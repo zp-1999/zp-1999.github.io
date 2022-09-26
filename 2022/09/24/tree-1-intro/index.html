@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/9 | Hexo</title>
+  <title>tree-1-intro | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/09/index.html">
+  <meta name="description" content="注意：本文描述所使用的高度，深度与国内通用的相比少1 非线性数据结构-树线性结构是一个有序数据元素的集合。常用的线性结构有：线性表，栈，队列，双队列，数组，串。非线性结构，数学用语，其逻辑特征是一个结点元素可能有多个直接前趋和多个直接后继。常见的非线性结构有：二维数组，多维数组，广义表，树（二叉树等）。 描述 树的相关术语：  节点：和链表一样，树也是由一颗颗的节点组成。 根节点：最上层的那颗节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tree-1-intro">
+<meta property="og:url" content="http://example.com/2022/09/24/tree-1-intro/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="注意：本文描述所使用的高度，深度与国内通用的相比少1 非线性数据结构-树线性结构是一个有序数据元素的集合。常用的线性结构有：线性表，栈，队列，双队列，数组，串。非线性结构，数学用语，其逻辑特征是一个结点元素可能有多个直接前趋和多个直接后继。常见的非线性结构有：二维数组，多维数组，广义表，树（二叉树等）。 描述 树的相关术语：  节点：和链表一样，树也是由一颗颗的节点组成。 根节点：最上层的那颗节点">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/treeDescribe.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/binaryTree.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/heightAndDeepth.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/impOfbinaryTree.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/Cost.PNG">
+<meta property="og:image" content="http://example.com/2022/09/24/tree-1-intro/searchBST.PNG">
+<meta property="article:published_time" content="2022-09-24T10:08:21.000Z">
+<meta property="article:modified_time" content="2022-09-24T11:54:03.431Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/09/24/tree-1-intro/treeDescribe.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,292 +161,207 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-tree-1-intro" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/graph-1-intro/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:10:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/graph-1-intro/">graph-1-intro</a>
+    <h1 class="article-title" itemprop="name">
+      tree-1-intro
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-3-app/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-3-app/">tree-3-app</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-2-imp/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:09:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-2-imp/">tree-2-imp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/tree-1-intro/" class="archive-article-date">
+        
+        <a href="/2022/09/24/tree-1-intro/" class="archive-article-date">
   	<time datetime="2022-09-24T10:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/tree-1-intro/">tree-1-intro</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>注意：本文描述所使用的高度，深度与国内通用的相比少1</strong></p>
+<h2 id="非线性数据结构-树"><a href="#非线性数据结构-树" class="headerlink" title="非线性数据结构-树"></a>非线性数据结构-树</h2><p>线性结构是一个有序数据元素的集合。常用的线性结构有：线性表，栈，队列，双队列，数组，串。非线性结构，数学用语，其逻辑特征是一个结点元素可能有多个直接前趋和多个直接后继。常见的非线性结构有：二维数组，多维数组，广义表，树（二叉树等）。</p>
+<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p><img src="/2022/09/24/tree-1-intro/treeDescribe.PNG"></p>
+<p>树的相关术语：</p>
+<ol>
+<li>节点：和链表一样，树也是由一颗颗的节点组成。</li>
+<li>根节点：最上层的那颗节点1就是根节点，根节点只有一颗，别和现实中的大树混在一起。</li>
+<li>双亲节点（也可以叫父节点）：如图中1就是2和3的双亲。</li>
+<li>孩子节点：如图中的3是1的子节点。</li>
+<li>子树：如图中的虚线框起来的就是两颗子树。</li>
+<li>节点的度（Degree）：节点拥有的子树数称为节点的度。</li>
+<li>树的度：树内各个节点的度的最大值。</li>
+<li>分支节点（也叫非终端节点）：度不为0的节点，除了根节点，分支节点也叫内部节点。</li>
+<li>叶子节点（也叫终端节点）：度为0的节点，如图中的4、6、8、9、10、11的度就为0，是叶子节点。</li>
+<li>节点的深度与高度：节点3的深度是1(根节点到该节点的路径长度)，节点3的高度是2(该节点距离最远叶子节点的路径长度)</li>
+</ol>
+<h3 id="二叉树的描述"><a href="#二叉树的描述" class="headerlink" title="二叉树的描述"></a>二叉树的描述</h3><p><img src="/2022/09/24/tree-1-intro/binaryTree.PNG"></p>
+<h3 id="树的应用方向"><a href="#树的应用方向" class="headerlink" title="树的应用方向"></a>树的应用方向</h3><ol>
+<li>磁盘驱动器上的文件系统</li>
+<li>组织数据以便快速查找、删除、插入</li>
+<li>特殊的树-Trie，存储字典</li>
+<li>网络路由算法等</li>
+</ol>
+<h3 id="二叉树的属性"><a href="#二叉树的属性" class="headerlink" title="二叉树的属性"></a>二叉树的属性</h3><p>一棵二叉树是结点的一个有限集合，该集合或者为空，或者是由一个根节点加上两棵别称为左子树和右子树的二叉树组成。</p>
+<p>二叉树的特点：</p>
+<ol>
+<li>每个节点最多有两棵子树，即不存在超过度为2的节点。</li>
+<li>二叉树的子树有左右之分，且左右不能颠倒。</li>
+</ol>
+<p>特殊的二叉树</p>
+<ol>
+<li>满二叉树(完美二叉树)：一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为K，且结点总数是(2^k) -1 ，则它就是满二叉树。</li>
+<li>完全二叉树：完全二叉树是由满二叉树引出的。满二叉树要求每一层的节点数都达到最大值，完全二叉树仅要求除最后一层外的节点数达到最大值，也就是说最后一层可以不满。我们可以把满二叉树看成特殊的完全二叉树。</li>
+<li>严格二叉树：每个节点只能有2或0个孩子节点。</li>
+<li>平衡二叉树的性质：左子树和右子树的高度之差的绝对值小于等于1，左子树和右子树也是平衡二叉树</li>
+</ol>
+<p>一个满二叉树的高度计算：<br><img src="/2022/09/24/tree-1-intro/heightAndDeepth.PNG"></p>
+<h3 id="二叉树的实现方式"><a href="#二叉树的实现方式" class="headerlink" title="二叉树的实现方式"></a>二叉树的实现方式</h3><ol>
+<li>动态创建链表节点</li>
+<li>数组（使用索引）<br><img src="/2022/09/24/tree-1-intro/impOfbinaryTree.PNG"></li>
+</ol>
+<h3 id="常用数据结构的插入、删除、查找操作的时间成本"><a href="#常用数据结构的插入、删除、查找操作的时间成本" class="headerlink" title="常用数据结构的插入、删除、查找操作的时间成本"></a>常用数据结构的插入、删除、查找操作的时间成本</h3><p><img src="/2022/09/24/tree-1-intro/Cost.PNG"></p>
+<h3 id="二分查找树-BST"><a href="#二分查找树-BST" class="headerlink" title="二分查找树(BST)"></a>二分查找树(BST)</h3><p>二分查找树的任一节点的左子树的孩子节点的值小于这个节点，右子树的孩子节点的值大于这个节点。<strong>其核心设计思想就是为了契合二分查找</strong>，使得数组的查找操作平均成本变为O(logn)，在二分查找树平衡的情况下成本最低，不平衡的情况下成本最高为O(n)<br><img src="/2022/09/24/tree-1-intro/searchBST.PNG"></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/09/24/tree-1-intro/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-3/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2022/09/24/tree-2-imp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          tree-2-imp
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/09/24/pointer-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">pointer-3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-3/">pointer-3</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-2/" class="archive-article-date">
-  	<time datetime="2022-09-24T10:00:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-2/">pointer-2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/24/pointer-1/" class="archive-article-date">
-  	<time datetime="2022-09-24T09:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/24/pointer-1/">pointer-1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/23/dataStructure-3-quenes/" class="archive-article-date">
-  	<time datetime="2022-09-23T12:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/23/dataStructure-3-quenes/">dataStructure-3-quenes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/22/dataStructure-2-Stack/" class="archive-article-date">
-  	<time datetime="2022-09-22T10:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/22/dataStructure-2-Stack/">dataStructure-2-Stack</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/09/21/datastructure-1/" class="archive-article-date">
-  	<time datetime="2022-09-21T02:52:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/09/21/datastructure-1/">dataStructure-1-LinkedList</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -458,8 +384,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
